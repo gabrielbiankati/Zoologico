@@ -18,13 +18,17 @@ namespace Zoologico
                 Console.WriteLine("Selecione a opção: ");
                 Console.WriteLine("1. Adicionar Mamífero");
                 Console.WriteLine("2. Adicionar Ave");
-                Console.WriteLine("3. Listar Animais");
-                Console.WriteLine("4. Alimentar animais");
-                Console.WriteLine("5. Sair");
+                Console.WriteLine("3. Adicionar Reptil");
+                Console.WriteLine("4. Listar Animais");
+                Console.WriteLine("5. Alimentar animais");
+                Console.WriteLine("6. Adicionar tratador de mamíferos");
+                Console.WriteLine("7. Adicionar tratador de aves");
+                Console.WriteLine("5. Listar tratadores");
+                Console.WriteLine("6. Sair");
 
                 string opcao = Console.ReadLine();
 
-                if (opcao == "5")
+                if (opcao == "6")
                 {
                     break;
                 }
@@ -60,9 +64,23 @@ namespace Zoologico
                         zoologico.AdicionarAnimal(ave);
                         break;
                     case "3":
-                        zoologico.ListarAnimais();
+                        Console.WriteLine("Digite o nome da ave: ");
+                        string nomeReptil = Console.ReadLine();
+
+                        Console.WriteLine("Digite a idade da ave: ");
+                        int idadeReptil = int.Parse(Console.ReadLine());
+
+                        Console.WriteLine("Digite a envergadura do animal: ");
+                        string tipoEscama = Console.ReadLine();
+
+                        Reptil reptil = new Reptil(nomeReptil, idadeReptil, tipoEscama);
+
+                        zoologico.AdicionarAnimal(reptil);
                         break;
                     case "4":
+                        zoologico.ListarAnimais();
+                        break;
+                    case "5":
                         zoologico.AlimentarAnimais();
                         break;
                     default:

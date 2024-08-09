@@ -7,7 +7,7 @@ using Zoologico.Interface;
 
 namespace Zoologico.classes
 {
-    public class Ave : Animal, IAlimentavel
+    public class Ave : Animal, IAlimentavel, ICuidavel
     {
         public double EnvergaduraAsas { get; set; }
         public Ave(string nome, int idade, double envergaduraAsas)
@@ -24,6 +24,11 @@ namespace Zoologico.classes
         public void Alimentar()
         {
             Console.WriteLine($"{Nome} é ave e está sendo alimentado");
+        }
+
+        public void Cuidar()
+        {
+            Console.WriteLine($"{Nome} é ave e está sendo cuidado");
         }
     }
 }

@@ -10,11 +10,26 @@ namespace Zoologico.classes
     public class ZoologicoClass
     {
         private List<Animal> animais = new List<Animal>();
+        private List<TratadorAves> tratadoresAves = new List<TratadorAves>();
+        private List<TratadorMamiferos> tratadoresMamiferos = new List<TratadorMamiferos>();
 
         public void AdicionarAnimal(Animal animal)
         {
             animais.Add(animal);
             Console.WriteLine($"{animal.Nome} foi adicionado");
+        }
+
+
+        public void AdicionarTratadorAves(TratadorAves tratador)
+        {
+            tratadoresAves.Add(tratador);
+            Console.WriteLine($"{tratador.Nome} foi adicionado e sua especialidade é {tratador.Especialidade}");
+        }
+
+        public void AdicionarTratadorMamiferos(TratadorMamiferos tratador)
+        {
+            tratadoresMamiferos.Add(tratador);
+            Console.WriteLine($"{tratador.Nome} foi adicionado e sua especialidade é {tratador.Especialidade}");
         }
 
         public void ListarAnimais()
@@ -31,6 +46,35 @@ namespace Zoologico.classes
             else
             {
                 Console.WriteLine("A lista está vazia");
+            }
+        }
+
+        public void ListarTratadoresMamifero()
+        {
+            if (tratadoresMamiferos.Count > 0)
+            {
+                Console.WriteLine("Tratadores de Mamíferos: ");
+                foreach (TratadorMamiferos tratadores in tratadoresMamiferos)
+                {
+                    Console.WriteLine($"Nome: {tratadores.Nome}, Idade: {tratadores.Especialidade}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("A lista de tratadores de mamíferos está vazia");
+            }
+
+            if (tratadoresAves.Count > 0)
+            {
+                Console.WriteLine("Tratadores de Aves: ");
+                foreach (TratadorAves tratadores in tratadoresAves)
+                {
+                    Console.WriteLine($"Nome: {tratadores.Nome}, Idade: {tratadores.Especialidade}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("A lista de tratadores de aves está vazia");
             }
         }
 

@@ -46,8 +46,13 @@
     <Compile Include="classes\Animal.cs" />
     <Compile Include="classes\Ave.cs" />
     <Compile Include="classes\Mamifero.cs" />
+    <Compile Include="classes\Reptil.cs" />
+    <Compile Include="classes\Tratador.cs" />
+    <Compile Include="classes\TratadorAves.cs" />
+    <Compile Include="classes\TratadorMamiferos.cs" />
     <Compile Include="classes\ZoologicoClass.cs" />
     <Compile Include="Interface\IAlimentavel.cs" />
+    <Compile Include="Interface\ICuidavel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

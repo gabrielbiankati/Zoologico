@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Zoologico.Interface
 {
-        public interface IAlimentavel
-        {
-            void Alimentar();
-        }
+    public interface ICuidavel
+    {
+        void Cuidar();
+    }
 }
-

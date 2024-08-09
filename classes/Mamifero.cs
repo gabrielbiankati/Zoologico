@@ -7,7 +7,7 @@ using Zoologico.Interface;
 
 namespace Zoologico.classes
 {
-    public class Mamifero : Animal, IAlimentavel
+    public class Mamifero : Animal, IAlimentavel, ICuidavel
     {
         public string TipoDePelo { get; set; }
         
@@ -25,6 +25,11 @@ namespace Zoologico.classes
         public void Alimentar()
         {
             Console.WriteLine($"{Nome} é mamífero e está sendo alimentado");
+        }
+
+        public void Cuidar()
+        {
+            Console.WriteLine($"{Nome} é mamífero e está sendo cuidado");
         }
     }
 }
