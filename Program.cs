@@ -23,12 +23,12 @@ namespace Zoologico
                 Console.WriteLine("5. Alimentar animais");
                 Console.WriteLine("6. Adicionar tratador de mamíferos");
                 Console.WriteLine("7. Adicionar tratador de aves");
-                Console.WriteLine("5. Listar tratadores");
-                Console.WriteLine("6. Sair");
+                Console.WriteLine("8. Listar tratadores");
+                Console.WriteLine("9. Sair");
 
                 string opcao = Console.ReadLine();
 
-                if (opcao == "6")
+                if (opcao == "9")
                 {
                     break;
                 }
@@ -83,6 +83,14 @@ namespace Zoologico
                     case "5":
                         zoologico.AlimentarAnimais();
                         break;
+                    case "6":
+                        zoologico.AdicionarTratadorMamiferos();
+                        break;
+                    case "7":
+                        zoologico.AdicionarTratadorAves();
+                        break;
+                    case "8":
+                        zoologico.
                     default:
                         Console.WriteLine("Opção desconhecida");
                         break;
